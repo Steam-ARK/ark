@@ -8,6 +8,7 @@
 https://developer.valvesoftware.com/wiki/SteamCMD#Docker
 https://hub.docker.com/r/cm2network/steamcmd/
 https://github.com/arkmanager/ark-server-tools
+服务器配置：https://ark.fandom.com/wiki/Server_configuration
 
 346110 = ARK: Survival Evolved
 376030 = ARK: Survival Evolved Dedicated Server

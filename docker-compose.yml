@@ -26,8 +26,8 @@ services:
     #   - ENABLE_CROSSPLAY=${ENABLE_CROSSPLAY}
     #   - DISABLE_BATTLEYE=${DISABLE_BATTLEYE}
     #   - GAME_MOD_IDS=${GAME_MOD_IDS}
-    volumes:
-      - ./volumes/steam/games:/home/steam/games
+    # volumes:
+      # - ./volumes/steam/games:/home/steam/games
       # - ./volumes/arkmanager:/etc/arkmanager
     ports:
       # Port for connections from ARK game client
