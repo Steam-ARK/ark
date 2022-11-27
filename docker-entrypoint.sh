@@ -2,7 +2,7 @@
 
 STEAM_DIR="/home/steam"
 STEAM_CMD_DIR="${STEAM_DIR}/steamcmd"
-STEAM_ARK_DIR="${STEAM_DIR}/ARK"
+STEAM_ARK_DIR="${STEAM_DIR}/games/ARK"
 ARK_MGR_DIR="/etc/arkmanager"
 
 # 确保 steam 可读写挂载目录的权限  
