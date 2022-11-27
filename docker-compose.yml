@@ -4,9 +4,6 @@ services:
   server:
     container_name: ark_server
     image: hermsi/ark-server:latest
-    volumes:
-      - ${HOME}/ark-server:/app
-      - ${HOME}/ark-server-backups:/home/steam/ARK-Backups
     environment:
       - SESSION_NAME=${SESSION_NAME}
       - SERVER_MAP=${SERVER_MAP}
@@ -17,6 +14,12 @@ services:
       - BACKUP_ON_STOP=${BACKUP_ON_STOP}
       - PRE_UPDATE_BACKUP=${PRE_UPDATE_BACKUP}
       - WARN_ON_STOP=${WARN_ON_STOP}
+      - ENABLE_CROSSPLAY=${ENABLE_CROSSPLAY}
+      - DISABLE_BATTLEYE=${DISABLE_BATTLEYE}
+      - GAME_MOD_IDS=${GAME_MOD_IDS}
+    volumes:
+      - ./volumes/ark-server:/app
+      - ./volumes/ark-server-backups:/home/steam/ARK-Backups
     ports:
       # Port for connections from ARK game client
       - "7777:7777/udp"
