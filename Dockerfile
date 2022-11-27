@@ -27,13 +27,13 @@ RUN ln -s /usr/bin/python3 /usr/bin/python && \
 RUN python -m pip install --upgrade pip
 
 
-# 安装 ark-server-tools
-RUN apt-get install -y coreutils findutils perl rsync
-RUN apt-get install -y perl-modules lsof libc6-i386 libgcc1 bzip2
-RUN curl -sL https://git.io/arkmanager | bash -s steam
+# 安装 ark-server-tools（没用）
+# RUN apt-get install -y coreutils findutils perl rsync
+# RUN apt-get install -y perl-modules lsof libc6-i386 libgcc1 bzip2
+# RUN curl -sL https://git.io/arkmanager | bash -s steam
 
 # 安装 ARK
-RUN arkmanager install
+# RUN arkmanager install
 
 
 # 入口
