@@ -1,33 +1,35 @@
 version: '3'
 
 services:
-  server:
-    container_name: ark_server
-    image: hermsi/ark-server:latest
-    environment:
-      - SESSION_NAME=${SESSION_NAME}
-      - SERVER_MAP=${SERVER_MAP}
-      - SERVER_PASSWORD=${SERVER_PASSWORD}
-      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
-      - MAX_PLAYERS=${MAX_PLAYERS}
-      - UPDATE_ON_START=${UPDATE_ON_START}
-      - BACKUP_ON_STOP=${BACKUP_ON_STOP}
-      - PRE_UPDATE_BACKUP=${PRE_UPDATE_BACKUP}
-      - WARN_ON_STOP=${WARN_ON_STOP}
-      - ENABLE_CROSSPLAY=${ENABLE_CROSSPLAY}
-      - DISABLE_BATTLEYE=${DISABLE_BATTLEYE}
-      - GAME_MOD_IDS=${GAME_MOD_IDS}
+  ark:
+    hostname: steam_game_server
+    container_name: steam_game_server
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    # environment:
+    #   - SESSION_NAME=${SESSION_NAME}
+    #   - SERVER_MAP=${SERVER_MAP}
+    #   - SERVER_PASSWORD=${SERVER_PASSWORD}
+    #   - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+    #   - MAX_PLAYERS=${MAX_PLAYERS}
+    #   - UPDATE_ON_START=${UPDATE_ON_START}
+    #   - BACKUP_ON_STOP=${BACKUP_ON_STOP}
+    #   - PRE_UPDATE_BACKUP=${PRE_UPDATE_BACKUP}
+    #   - WARN_ON_STOP=${WARN_ON_STOP}
+    #   - ENABLE_CROSSPLAY=${ENABLE_CROSSPLAY}
+    #   - DISABLE_BATTLEYE=${DISABLE_BATTLEYE}
+    #   - GAME_MOD_IDS=${GAME_MOD_IDS}
     volumes:
-      - ./volumes/ark-server:/app
-      - ./volumes/ark-server-backups:/home/steam/ARK-Backups
+      - ./volumes/steam/games:/home/steam/games
     ports:
       # Port for connections from ARK game client
       - "7777:7777/udp"
-      # Raw UDP socket port (always Game client port +1)
+      # Raw UDP socket port (always Game client port +1)  : 自定义的服务器端口
       - "7778:7778/udp"
-      # RCON management port
+      # RCON management port: 服务器命令行管理工具 RCON 的连接端口
       - "27020:27020/tcp"
-      # Steam's server-list port
+      # Steam's server-list port: steam 与服务器交互的端口
       - "27015:27015/udp"
     networks: 
       ark:

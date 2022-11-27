@@ -26,10 +26,50 @@ SERVER_LIST_PORT	27015	Exposed server-list port
 GAME_MOD_IDS	empty	Additional game-mods you want to install, seperated by comma. (e.g. GAME_MOD_IDS="487516323,487516324,487516325")
 
 
+
+ShooterGame/Binaries/Linux/ShooterGameServer TheIsland?listen?Port=7779?QueryPort=27017AltSaveDirectoryName=gudao?SessionName="ARK原初-孤岛"?MaxPlayers=30?ServerAutoForceRespawnWildDinosInterval=259200?AllowCrateSpawnsOnTopOfStructures=True -ForceAllowCaveFlyers -AutoDestroyStructures -clusterid=2022 -ClusterDirOverride=/home/steam/ark/arkwq -NoBattlEye -crossplay -nosteamclient -game -server -log
+
+
+
+
+参数说明：
+
+        地图：要开什么地图就在地图位置写入相应的地图名（这里是孤岛）
+
+        端口：服务端的端口（必须唯一）
+
+        搜索端口：在steam上搜索时使用的端口（必须唯一）
+
+        组内名称：在这个服务器上的名字（必须唯一）
+
+        服务器名称：在steam服务器上看到的名称
+
+        最大人数：服务器可容纳的人数
+
+        组名称：这个服务器上开的地图组名称（多个图希望哪些图互通的就设置一样，如一个孤岛的设置是2022，一个畸变的设置也是2022，这俩个图就能互通）
+
+        集群目录：服务器上传缓存的位置玩家上传到方舟的角色和物品的缓存）
+
+ShooterGame/Binaries/Linux/ShooterGameServer 地图?listen?Port=端口?QueryPort=搜索端口AltSaveDirectoryName=组内名称?SessionName="服务器名称"?MaxPlayers=最大人数?ServerAutoForceRespawnWildDinosInterval=259200?AllowCrateSpawnsOnTopOfStructures=True -ForceAllowCaveFlyers -AutoDestroyStructures -clusterid=组名称 -ClusterDirOverride=集群目录 -NoBattlEye -crossplay -nosteamclient -game -server -log
+
+2.游戏配置文件：
+
+        全局文件配置：
+
+在/home/steam/ARK/ShooterGame/Saved/Config/LinuxServer文件夹下的Game.ini和GameUserSettings.ini一般只设置GameUserSettings.ini文件
+
+
+
+
 ## 参考文档
+
+https://blog.csdn.net/xiaotian2333333/article/details/124733348
+
 
 - 《[方舟生存进化: docker一键部署](https://ssst0n3.github.io/post/%E6%B8%B8%E6%88%8F/%E6%96%B9%E8%88%9F%E7%94%9F%E5%AD%98%E8%BF%9B%E5%8C%96-docker%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2.html)》
 - 《[ark-server-tools](https://github.com/arkmanager/ark-server-tools)》
 - 《[arkserver](https://github.com/thmhoag/arkserver)》
 - 《[Dockerize ARK managed with ARK-Server-Tools](https://hub.docker.com/r/hermsi/ark-server/)》
+
+
 
