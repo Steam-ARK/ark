@@ -5,25 +5,25 @@
 # ./run.ps1 -svc_pwd "${SPWD}" -admin_pwd "${APWD}" -max_players "${AMOUNT}" -svc_map "${MAP_NAME}" -game_mod_ids "{ID1},{ID2},...,{IDn}"
 #------------------------------------------------
 
-$SESSION_NAME="ARK-Docker-Server-By-EXP"
-$SERVER_MAP="TheIsland"
-$SERVER_PASSWORD="svc010203"
-$ADMIN_PASSWORD="admin040506"
-$MAX_PLAYERS=20
-$UPDATE_ON_START="false"
-$BACKUP_ON_STOP="false"
-$PRE_UPDATE_BACKUP="true"
-$WARN_ON_STOP="true"
-$ENABLE_CROSSPLAY="false"
-$DISABLE_BATTLEYE="false"
-$GAME_MOD_IDS=""
+session_name="ARK-Docker-Server-By-EXP"
+svc_map="TheIsland"
+svc_pwd="svc010203"
+admin_pwd="admin040506"
+max_players=20
+update_on_start="false"
+backup_on_stop="false"
+pre_update_backup="true"
+warn_on_stop="true"
+enable_crossplay="false"
+disable_battleye="false"
+game_mod_ids=""
 
 
-set -- `getopt svc_pwd:p:i:g: "$@"`
+set -- `getopt s:p:i:g: "$@"`
 while [ -n "$1" ]
 do
   case "$1" in
-    -svc_pwd) USERNAME="$2"
+    -s) session_name="$2"
         shift ;;
     -p) PASSWORD="$2"
         shift ;;
