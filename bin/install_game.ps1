@@ -8,7 +8,8 @@
 $CONTAINER_NAME = "steam_game_server"
 $CONTAINER_ID = (docker ps -aq --filter name="$CONTAINER_NAME")
 if(![String]::IsNullOrEmpty($CONTAINER_ID)) {
-    docker exec -it $CONTAINER_ID bash
+    docker exec -it $CONTAINER_ID /home/steam/steamcmd/steamcmd.sh
 } else {
     Write-Host "[$CONTAINER_NAME] is not running."
 }
+

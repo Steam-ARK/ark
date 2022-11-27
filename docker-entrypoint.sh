@@ -5,7 +5,7 @@
 # STEAM_GAME_DIR="/home/steam/games"
 
 # # 游戏参数： ARK 方舟生存进化
-# GAME_DIR="${STEAM_GAME_DIR}/ARK"
+# GAME_DIR="${STEAM_GAME_DIR}/ark"
 # GAME_ID="376030"
 
 # # 运行 steamcmd
@@ -13,7 +13,7 @@
 #     ./steamcmd.sh
 
 # # 设置游戏安装目录
-# force_install_dir ${GAME_DIR}
+# force_install_dir /home/steam/games/ark
 
 # # 匿名方式登录 steam
 # login anonymous

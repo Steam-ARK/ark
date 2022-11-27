@@ -5,6 +5,18 @@
 ------
 
 
+https://developer.valvesoftware.com/wiki/SteamCMD#Docker
+https://hub.docker.com/r/cm2network/steamcmd/
+
+
+346110 = ARK: Survival Evolved
+376030 = ARK: Survival Evolved Dedicated Server
+
+#其中数字是这游戏的steamapp id
+网站查看https://steamcommunity.com/app
+搜索需要查看的游戏，然后看浏览器网址窗口app后面跟的数值就是这个app的id
+
+
 
 Variable	Default value	Explanation
 SESSION_NAME	Dockerized ARK Server by github.com/hermsi1337	The name of your ARK-session which is visible in game when searching for servers
