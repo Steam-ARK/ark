@@ -2,6 +2,7 @@ version: '3'
 
 services:
   ark:
+    # user: "1000:1000"
     hostname: ARK_SVC
     container_name: ARK_SVC
     build:
@@ -27,6 +28,7 @@ services:
     #   - GAME_MOD_IDS=${GAME_MOD_IDS}
     volumes:
       - ./volumes/steam/games:/home/steam/games
+      # - ./volumes/arkmanager:/etc/arkmanager
     ports:
       # Port for connections from ARK game client
       - "7777:7777/udp"

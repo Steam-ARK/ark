@@ -1,5 +1,6 @@
 FROM cm2network/steamcmd:root
 
+# 更新源
 RUN sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 RUN apt-get clean && \
     apt-get update -y && \
@@ -26,6 +27,16 @@ RUN ln -s /usr/bin/python3 /usr/bin/python && \
 RUN python -m pip install --upgrade pip
 
 
+# 安装 ark-server-tools
+RUN apt-get install -y coreutils findutils perl rsync
+RUN apt-get install -y perl-modules lsof libc6-i386 libgcc1 bzip2
+RUN curl -sL https://git.io/arkmanager | bash -s steam
+
+# 安装 ARK
+RUN arkmanager install
+
+
+# 入口
 WORKDIR /home/steam/steamcmd
 RUN echo "alias ll='ls -l'" >> /root/.bashrc
 ADD ./docker-entrypoint.sh /docker-entrypoint.sh

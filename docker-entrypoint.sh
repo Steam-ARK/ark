@@ -1,26 +1,14 @@
 #!/bin/bash
 
-# steam 参数
-# STEAM_CMD_DIR="/home/steam/steamcmd"
-# STEAM_GAME_DIR="/home/steam/games"
+STEAM_DIR="/home/steam"
+STEAM_CMD_DIR="${STEAM_DIR}/steamcmd"
+STEAM_ARK_DIR="${STEAM_DIR}/ARK"
+ARK_MGR_DIR="/etc/arkmanager"
 
-# # 游戏参数： ARK 方舟生存进化
-# GAME_DIR="${STEAM_GAME_DIR}/ark"
-# GAME_ID="376030"
-
-# # 运行 steamcmd
-# chmod a+x *.sh && \
-#     ./steamcmd.sh
-
-# # 设置游戏安装目录
-# force_install_dir /home/steam/games/ark
-
-# # 匿名方式登录 steam
-# login anonymous
- 
-# # 安装并更新游戏服务端
-# app_update ${GAME_ID} && \
-#     app_update ${GAME_ID} validate
+# 确保 steam 可读写挂载目录的权限  
+mkdir -p ${STEAM_ARK_DIR}
+chown -R 1000:1000 ${STEAM_ARK_DIR}
+chown -R 1000:1000 ${ARK_MGR_DIR}
 
 # 保持前台运行，避免 docker 挂起
 while true ; do
