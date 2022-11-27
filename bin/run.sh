@@ -19,20 +19,18 @@ disable_battleye="false"
 game_mod_ids=""
 
 
-set -- `getopt s:p:i:g: "$@"`
-while [ -n "$1" ]
-do
-  case "$1" in
-    -s) session_name="$2"
-        shift ;;
-    -p) PASSWORD="$2"
-        shift ;;
-    -i) U_ID="$2"
-        shift ;;
-    -g) G_ID="$2"
-        shift ;;
-  esac
-  shift
+parameters=$(getopt -o SHORT_OPTIONS -l LONG_OPTIONS -n "$0" -- "$@")
+[ $? != 0 ] && exit 1
+eval set -- "$parameters"   # 将$parameters设置为位置参数
+while true ; do             # 循环解析位置参数
+    case "$1" in
+        -a|--session_name) 
+            session_name="$2";
+            shift 2;;
+        -b|--svc_map) 
+            svc_map="$2";
+            shift 2;;
+    esac
 done
 
 
