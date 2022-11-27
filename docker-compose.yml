@@ -2,8 +2,8 @@ version: '3'
 
 services:
   ark:
-    hostname: steam_game_server
-    container_name: steam_game_server
+    hostname: ARK_SVC
+    container_name: ARK_SVC
     build:
       context: .
       dockerfile: ./Dockerfile

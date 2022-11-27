@@ -1,15 +1,28 @@
 #!/bin/bash
-# è¿è¡Œ Calibre æœåŠ¡
+# °²×° steam ÓÎÏ··şÎñ¶Ë
 #------------------------------------------------
-# å‘½ä»¤æ‰§è¡Œç¤ºä¾‹ï¼š
+# ÃüÁîÖ´ĞĞÊ¾Àı£º
 # bin/install_game.ps1
 #------------------------------------------------
 
-$CONTAINER_NAME = "steam_game_server"
+Write-Host "´Ë½Å±¾ÓÃÓÚÔÚ Docker ÖĞ°²×° steam Ä³¸öÓÎÏ·µÄ¶ÀÁ¢·şÎñÆ÷ ..."
+Write-Host "¹ı³ÌÖĞ»á¿ªÆô steam ÖÕ¶Ë£¬Çë¸ù¾İÌáÊ¾½øĞĞ½»»¥ ."
+
+$CONTAINER_NAME = "ARK_SVC"
 $CONTAINER_ID = (docker ps -aq --filter name="$CONTAINER_NAME")
 if(![String]::IsNullOrEmpty($CONTAINER_ID)) {
+    Write-Host "ÇëÔÚ steam ÖÕ¶ËÄÚÒÀ´ÎÊäÈëÒÔÏÂÃüÁî :"
+    Write-Host '1. [´´½¨ÓÎÏ·Ä¿Â¼]: force_install_dir /home/steam/games/${GAME_NAME}'
+    Write-Host "   [ARK Ê¾ÀıÃüÁî]: force_install_dir /home/steam/games/ark"
+    Write-Host "2. [µÇÂ¼ÄäÃûÓÃ»§]: login anonymous"
+    Write-Host '3. [°²×°ÓÎÏ·Ë½·ş]: app_update ${GAME_ID}'
+    Write-Host "   [ARK Ê¾ÀıÃüÁî]: app_update 376030"
+    Write-Host '4. [¸üĞÂ£¨¿ÉÑ¡£©]: app_update ${GAME_ID} validate'
+    Write-Host "   [ARK Ê¾ÀıÃüÁî]: app_update 376030 validate"
     docker exec -it $CONTAINER_ID /home/steam/steamcmd/steamcmd.sh
+
 } else {
-    Write-Host "[$CONTAINER_NAME] is not running."
+    Write-Host "[$CONTAINER_NAME] ÈİÆ÷Ã»ÓĞÔËĞĞ ..."
 }
 
+Write-Host "°²×°½Å±¾ÖÕÖ¹."
