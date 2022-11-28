@@ -34,6 +34,8 @@ RUN python -m pip install --upgrade pip
 
 # 安装 ARK
 # RUN arkmanager install
+RUN mkdir -p /home/steam/bin
+ADD ./bin/ark.sh /home/steam/bin/ark.sh
 
 
 # 入口

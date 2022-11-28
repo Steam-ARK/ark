@@ -13,7 +13,7 @@ $CONTAINER_ID = (docker ps -aq --filter name="$CONTAINER_NAME")
 if(![String]::IsNullOrEmpty($CONTAINER_ID)) {
     Write-Host "请在 steam 终端内依次输入以下命令 :"
     Write-Host '1. [创建游戏目录]: force_install_dir /home/steam/games/${GAME_NAME}'
-    Write-Host "   [ARK 示例命令]: force_install_dir /home/steam/games/ARK"
+    Write-Host "   [ARK 示例命令]: force_install_dir /home/steam/games/ark"
     Write-Host "2. [登录匿名用户]: login anonymous"
     Write-Host '3. [安装游戏私服]: app_update ${GAME_ID}'
     Write-Host "   [ARK 示例命令]: app_update 376030"
