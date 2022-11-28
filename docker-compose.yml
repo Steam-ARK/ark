@@ -27,7 +27,7 @@ services:
     #   - DISABLE_BATTLEYE=${DISABLE_BATTLEYE}
     #   - GAME_MOD_IDS=${GAME_MOD_IDS}
     volumes:
-      - ./volumes/steam/saves:/home/steam/saves
+      - ./volumes/steam/saved:/home/steam/saved
       - ./volumes/steam/games:/home/steam/games
       # - ./volumes/arkmanager:/etc/arkmanager
     ports:

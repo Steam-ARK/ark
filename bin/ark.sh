@@ -47,7 +47,7 @@ ENABLE_CROSSPLAY=$enable_crossplay
 DISABLE_BATTLEYE=$disable_battleye
 GAME_MOD_IDS=$game_mod_ids
 # 服务器上传缓存的位置玩家上传到方舟的角色和物品的缓存）
-SAVE_DIR="/home/steam/saves/ark"
+SAVE_DIR="/home/steam/saved/ark"
 
 
 ${STEAM_ARK_DIR}/ShooterGame/Binaries/Linux/ShooterGameServer ${SERVER_MAP}?\
