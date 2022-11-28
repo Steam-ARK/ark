@@ -1,3 +1,31 @@
+ShooterGame/Saved/*
+ShooterGame/Saved/Config/*
+ShooterGame/Saved/Logs/*
+ShooterGame/Binaries/Win64/*
+ShooterGame/Content/Genesis2/Matinee/Stinger/Animation/GEN2_STG_Santiago.uasset
+
+# ShooterGame/Content/Mods/*
+# *.umap
+ShooterGame/Content/Mods/CrystalIsles/LandscapeSublevel_Mainland_Auto9.umap
+ShooterGame/Content/Mods/FjordurOfficial/PGS_LandscapeSublevel.umap
+ShooterGame/Content/Mods/LostIsland/LandscapeSublevel.umap
+ShooterGame/Content/Mods/Ragnarok/Ragnarok_Landscape_V2.umap
+ShooterGame/Content/Mods/TheCenter/TheCenter.umap
+ShooterGame/Content/Mods/Valguero/LandscapeSublevel.umap
+
+ShooterGame/Content/Maps/*
+ShooterGame/Content/Maps/Aberration/AB_Landscape.umap
+ShooterGame/Content/Maps/Extinction/Ext_Landscape.umap
+ShooterGame/Content/Maps/Genesis2/Gen2.umap
+ShooterGame/Content/Maps/ScorchedEarth/SE_Landscape.umap
+ShooterGame/Content/Maps/TheIslandSubMaps/LandscapeSublevel.umap
+
+
+
+
+volumes/steam/games/ark/ShooterGame/Saved/*
+volumes/steam/games/ark/ShooterGame/Saved/Config/*
+volumes/steam/games/ark/ShooterGame/Saved/Logs/*
 volumes/steam/games/ark/ShooterGame/Binaries/Win64/*
 volumes/steam/games/ark/ShooterGame/Content/Genesis2/Matinee/Stinger/Animation/GEN2_STG_Santiago.uasset
 
@@ -10,7 +38,7 @@ volumes/steam/games/ark/ShooterGame/Content/Mods/Ragnarok/Ragnarok_Landscape_V2.
 volumes/steam/games/ark/ShooterGame/Content/Mods/TheCenter/TheCenter.umap
 volumes/steam/games/ark/ShooterGame/Content/Mods/Valguero/LandscapeSublevel.umap
 
-# volumes/steam/games/ark/ShooterGame/Content/Maps/*
+volumes/steam/games/ark/ShooterGame/Content/Maps/*
 volumes/steam/games/ark/ShooterGame/Content/Maps/Aberration/AB_Landscape.umap
 volumes/steam/games/ark/ShooterGame/Content/Maps/Extinction/Ext_Landscape.umap
 volumes/steam/games/ark/ShooterGame/Content/Maps/Genesis2/Gen2.umap
