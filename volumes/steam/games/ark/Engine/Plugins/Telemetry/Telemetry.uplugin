@@ -1,0 +1,25 @@
+{
+    "FileVersion" : 1,
+	
+	"FriendlyName" : "Telemetry",
+	"Version" : 1,
+	"VersionName" : "1.0",
+	"CreatedBy" : "RAD Game Tools, Inc.",
+	"CreatedByURL" : "http://radgametools.com",
+	"Description" : "Telemetry profiling integration.",
+    "Category": "Profiling",
+	"EnabledByDefault" : true,
+	"CanContainContent" : false,
+	"IsBetaVersion" : false,
+	"Installed" : false,
+	
+    "Modules" :
+	[
+		{
+			"Name" : "Telemetry",
+			"Type" : "Runtime",
+			"LoadingPhase" : "PreLoadingScreen",
+			"WhitelistPlatforms": [ "Linux", "Win32", "Win64", "Mac", "PS4", "IOS", "Android", "XBoxOne" ]
+		}
+    ]
+}
