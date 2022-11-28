@@ -14,6 +14,9 @@ mkdir -p ${ARK_SAVE_DIR}
 chown -R 1000:1000 ${STEAM_DIR}
 # chown -R 1000:1000 ${ARK_MGR_DIR}
 
+
+${STEAM_DIR}/bin/ark.sh
+
 # 保持前台运行，避免 docker 挂起
 while true ; do
     sleep 3600
