@@ -1,8 +1,8 @@
 #!/bin/bash
-# 停止 docker 服务
+# 构建 docker 镜像
 #------------------------------------------------
 # 命令执行示例：
-# bin/stop.sh
+# bin/build.sh
 #------------------------------------------------
 
-docker-compose down
+docker-compose build
