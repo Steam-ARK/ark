@@ -1,13 +1,15 @@
 # ARK-docker
 
-> docker 一键部署 ARK - 方舟生存进化
+> docker 一键部署 ARK（方舟生存进化）
 
 ------
 
 
+
+ark 服务端上传到 github ?
+
 https://developer.valvesoftware.com/wiki/SteamCMD#Docker
 https://hub.docker.com/r/cm2network/steamcmd/
-https://github.com/arkmanager/ark-server-tools
 服务器配置：https://ark.fandom.com/wiki/Server_configuration
 
 346110 = ARK: Survival Evolved
@@ -79,10 +81,19 @@ ShooterGame/Binaries/Linux/ShooterGameServer 地图?listen?Port=端口?QueryPort
 https://blog.csdn.net/xiaotian2333333/article/details/124733348
 
 
+没用到  https://github.com/arkmanager/ark-server-tools
+
 - 《[方舟生存进化: docker一键部署](https://ssst0n3.github.io/post/%E6%B8%B8%E6%88%8F/%E6%96%B9%E8%88%9F%E7%94%9F%E5%AD%98%E8%BF%9B%E5%8C%96-docker%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2.html)》
 - 《[ark-server-tools](https://github.com/arkmanager/ark-server-tools)》
 - 《[arkserver](https://github.com/thmhoag/arkserver)》
 - 《[Dockerize ARK managed with ARK-Server-Tools](https://hub.docker.com/r/hermsi/ark-server/)》
 
 
-
+```
+[S_API FAIL] SteamAPI_Init() failed; SteamAPI_IsSteamRunning() failed.
+/home/buildbot/buildslave/steam_rel_client_linux64/build/src/clientdll/applicationmanager.cpp (3004) : Assertion Failed: CApplicationManager::GetMountVolume: invalid index
+/home/buildbot/buildslave/steam_rel_client_linux64/build/src/clientdll/applicationmanager.cpp (3004) : Assertion Failed: CApplicationManager::GetMountVolume: invalid index
+/home/buildbot/buildslave/steam_rel_client_linux64/build/src/clientdll/applicationmanager.cpp (3155) : Assertion Failed: m_vecInstallBaseFolders.Count() > 0
+```
+这个报错对启动服务器无影响，最少需要启动15分钟
+https://community.teklab.de/thread/9383-ark-gameserver-startet-nicht/

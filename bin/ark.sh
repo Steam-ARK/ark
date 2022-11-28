@@ -2,7 +2,6 @@
 # 启动 ARK 服务
 #------------------------------------------------
 
-
 ark_dir="/home/steam/games/ark"
 session_name="ARK_Docker_Server_By_EXP"
 svc_map="TheIsland"
@@ -51,7 +50,7 @@ SAVE_DIR="/home/steam/saved/ark"
 
 
 ${STEAM_ARK_DIR}/ShooterGame/Binaries/Linux/ShooterGameServer ${SERVER_MAP}?\
-listen?Port={GAME_CLIENT_PORT}?\
+listen?Port=${GAME_CLIENT_PORT}?\
 QueryPort=${SERVER_LIST_PORT}?\
 AltSaveDirectoryName="${SESSION_GROUP}"?\
 SessionName="${SESSION_NAME}"?\
