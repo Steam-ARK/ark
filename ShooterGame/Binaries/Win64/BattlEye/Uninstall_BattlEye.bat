@@ -1,0 +1,3 @@
+@echo off
+echo Uninstalling BattlEye...
+..\ShooterGame_BE.exe 4
