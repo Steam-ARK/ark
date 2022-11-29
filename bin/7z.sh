@@ -1,45 +1,29 @@
+#!/bin/sh
+# -------------------------------
 
-cd ShooterGame/Binaries/Win64
-7z a -t7z ShooterGameServer.pdb.7z ShooterGameServer.pdb
-cd -
+function compress() {
+    dir=$1
+    filename=$2
 
-cd ShooterGame/Content/Genesis2/Matinee/Stinger/Animation
-7z a -t7z GEN2_STG_Santiago.uasset.7z GEN2_STG_Santiago.uasset
-cd -
+    cd ${dir}
+    7z a -t7z "${filename}.7z" "{filename}"
+    cd -
+}
 
-cd ShooterGame/Content/Mods/CrystalIsles
-7z a -t7z LandscapeSublevel_Mainland_Auto9.umap.7z LandscapeSublevel_Mainland_Auto9.umap
-cd -
-cd ShooterGame/Content/Mods/FjordurOfficial
-7z a -t7z PGS_LandscapeSublevel.umap.7z PGS_LandscapeSublevel.umap
-cd -
-cd ShooterGame/Content/Mods/LostIsland
-7z a -t7z LandscapeSublevel.umap.7z LandscapeSublevel.umap
-cd -
-cd ShooterGame/Content/Mods/Ragnarok
-7z a -t7z Ragnarok_Landscape_V2.umap.7z Ragnarok_Landscape_V2.umap
-cd -
-cd ShooterGame/Content/Mods/TheCenter
-7z a -t7z TheCenter.umap.7z TheCenter.umap
-cd -
-cd ShooterGame/Content/Mods/Valguero
-7z a -t7z LandscapeSublevel.umap.7z LandscapeSublevel.umap
-cd -
+compress "ShooterGame/Binaries/Win64" "ShooterGameServer.pdb"
+compress "ShooterGame/Content/Genesis2/Matinee/Stinger/Animation" "GEN2_STG_Santiago.uasset"
+compress "ShooterGame/Content/Mods/CrystalIsles" "LandscapeSublevel_Mainland_Auto9.umap"
+compress "ShooterGame/Content/Mods/FjordurOfficial" "PGS_LandscapeSublevel.umap"
+compress "ShooterGame/Content/Mods/LostIsland" "LandscapeSublevel.umap"
+compress "ShooterGame/Content/Mods/Ragnarok" "Ragnarok_Landscape_V2.umap"
+compress "ShooterGame/Content/Mods/TheCenter" "TheCenter.umap"
+compress "ShooterGame/Content/Mods/Valguero" "LandscapeSublevel.umap"
+compress "ShooterGame/Content/Maps/Aberration" "AB_Landscape.umap"
+compress "ShooterGame/Content/Maps/Extinction" "Ext_Landscape.umap"
+compress "ShooterGame/Content/Maps/ScorchedEarth" "SE_Landscape.umap"
+compress "ShooterGame/Content/Maps/TheIslandSubMaps" "LandscapeSublevel.umap"
 
-cd ShooterGame/Content/Maps/Aberration
-7z a -t7z AB_Landscape.umap.7z AB_Landscape.umap
-cd -
-cd ShooterGame/Content/Maps/Extinction
-7z a -t7z Ext_Landscape.umap.7z Ext_Landscape.umap
-cd -
+
 # cd ShooterGame/Content/Maps/Genesis2
 # 7z a -t7z Gen2.umap.7z Gen2.umap
 # cd -
-cd ShooterGame/Content/Maps/ScorchedEarth
-7z a -t7z SE_Landscape.umap.7z SE_Landscape.umap
-cd -
-cd ShooterGame/Content/Maps/TheIslandSubMaps
-7z a -t7z LandscapeSublevel.umap.7z LandscapeSublevel.umap
-cd -
-
-
