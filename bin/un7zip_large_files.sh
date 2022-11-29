@@ -6,12 +6,14 @@
 # 执行: bin/un7zip_large_files.sh
 # -------------------------------
 
+BASE_DIR=`pwd`
+
 function un7zip() {
     dir=$1
     filename=$2
     zip_name="${filename}.7z"
 
-    cd ${dir}
+    cd "${dir}"
     if [ ! -f "${filename}" ];then
         if [ -f "${zip_name}" ];then
             7z x "${zip_name}"
@@ -21,7 +23,7 @@ function un7zip() {
     else
         echo "[${filename}] already exist"
     fi
-    cd -
+    cd "${BASE_DIR}"
 }
 
 function un7zip_segments() {
@@ -30,14 +32,17 @@ function un7zip_segments() {
     zip_name="${filename}.7z"
     segment_name="${zip_name}.*"
 
-    cd ${dir}
+    cd "${dir}"
     if [ ! -f "${zip_name}" ];then
         cat "${segment_name}" > "${zip_name}"
     fi
-    cd -
+    cd "${BASE_DIR}"
 
     un7zip "${dir}" "${filename}"
 }
+
+
+echo "un7zip all files ..."
 
 un7zip "ShooterGame/Binaries/Win64" "ShooterGameServer.pdb"
 un7zip "ShooterGame/Content/Genesis2/Matinee/Stinger/Animation" "GEN2_STG_Santiago.uasset"
@@ -52,3 +57,5 @@ un7zip "ShooterGame/Content/Maps/Extinction" "Ext_Landscape.umap"
 un7zip "ShooterGame/Content/Maps/ScorchedEarth" "SE_Landscape.umap"
 un7zip "ShooterGame/Content/Maps/TheIslandSubMaps" "LandscapeSublevel.umap"
 un7zip_segments "ShooterGame/Content/Maps/Genesis2" "Gen2.umap"
+
+echo "all done ."
