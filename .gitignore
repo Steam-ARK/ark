@@ -1,10 +1,10 @@
 ShooterGame/Saved/*
 ShooterGame/Saved/Config/*
 ShooterGame/Saved/Logs/*
-ShooterGame/Binaries/Win64/*
-ShooterGame/Content/Genesis2/Matinee/Stinger/Animation/GEN2_STG_Santiago.uasset
 
-# *.umap
+# ShooterGame/Binaries/Win64/*
+ShooterGame/Binaries/Win64/ShooterGameServer.pdb
+ShooterGame/Content/Genesis2/Matinee/Stinger/Animation/GEN2_STG_Santiago.uasset
 
 # ShooterGame/Content/Mods/*
 ShooterGame/Content/Mods/CrystalIsles/LandscapeSublevel_Mainland_Auto9.umap
