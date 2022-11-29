@@ -1,9 +1,9 @@
 #!/bin/sh
 # -------------------------------
 # 解压 ARK 服务端中原本的大文件（超过 100M 无法上传 Github）
+# 需要预装 7-zip: https://www.7-zip.org/
 # -------------------------------
-# 此脚本需要预装 7z 命令行: https://www.7-zip.org/download.html
-# 执行: bin/un7zip_large_files.sh
+# 示例: bin/unpack_7zip.sh
 # -------------------------------
 
 BASE_DIR=`pwd`

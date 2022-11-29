@@ -8,7 +8,7 @@
 
 此为 steam 版 ARK 服务端（20221129）。
 
-> 与 steamCMD 下载的服务端是一样的，配合 [ark-server-docker](https://github.com/lyy289065406/ark-server-docker.git) 使用
+> 与 [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) 下载的服务端是一样的，配合 [ark-server-docker](https://github.com/lyy289065406/ark-server-docker.git) 使用
 
 
 ## 运行环境
@@ -30,7 +30,7 @@
 ## 部署步骤
 
 1. 下载此仓库: `git clone --depth 1 --branch master https://github.com/lyy289065406/ark.git`
-2. 解压大文件: `bin/un7zip_large_files.sh`
+2. 解压大文件: `bin/unpack_7zip.sh` 或 `bin/unpack_7zip.ps1`
 3. 参考 [ARK Server configuration](https://ark.fandom.com/wiki/Server_configuration) 定制自己的启动脚本启动服务即可
 
 其中，启动服务所需的可执行文件：
