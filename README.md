@@ -6,7 +6,7 @@
 
 ## 介绍
 
-此为 steam 版 ARK 服务端（20221129）。
+此为 steam 版 ARK 服务端 [354.4](./version.txt) 版本（20221129）。
 
 与 [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) 下载的服务端是一样的，配合 [ark-server-docker](https://github.com/lyy289065406/ark-server-docker.git) 使用。
 
