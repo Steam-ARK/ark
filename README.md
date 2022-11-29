@@ -31,7 +31,8 @@
 
 ## 部署步骤
 
-1. 下载此仓库: `git clone --depth 1 --branch master https://github.com/lyy289065406/ark.git`
+1. Frok 此仓库（目的是使用 [ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) 下载）: `https://github.com/lyy289065406/ark.git`
+1. [ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) 下载此仓库: `git clone --depth 1 --branch master git@github.com:lyy289065406/ark.git`
 2. 解压大文件: `bin/unpack_7zip.sh` 或 `bin/unpack_7zip.ps1`
 3. 参考 [ARK Server configuration](https://ark.fandom.com/wiki/Server_configuration) 定制自己的启动脚本启动服务即可
 
