@@ -1,6 +1,6 @@
 # ARK: Survival Evolved Dedicated Server
 
-> ARK: 方舟‧生存进化 - 完整服务端
+> ARK: 方舟‧生存进化 - steam 服务端
 
 ------
 
