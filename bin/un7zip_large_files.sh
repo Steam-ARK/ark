@@ -34,11 +34,12 @@ function un7zip_segments() {
 
     cd "${dir}"
     if [ ! -f "${zip_name}" ];then
-        cat "${segment_name}" > "${zip_name}"
+        cat `ls | grep "${segment_name}"` > "${zip_name}"
     fi
     cd "${BASE_DIR}"
 
     un7zip "${dir}" "${filename}"
+    rm -f "${dir}/${zip_name}"
 }
 
 
