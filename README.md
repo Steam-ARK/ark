@@ -8,7 +8,9 @@
 
 此为 steam 版 ARK 服务端（20221129）。
 
-> 与 [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) 下载的服务端是一样的，配合 [ark-server-docker](https://github.com/lyy289065406/ark-server-docker.git) 使用
+与 [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) 下载的服务端是一样的，配合 [ark-server-docker](https://github.com/lyy289065406/ark-server-docker.git) 使用。
+
+> 上传到 Github 是为了方便通过 [ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) 下载、以解决 steam 下载太慢或总是失败的问题
 
 
 ## 运行环境
@@ -40,6 +42,6 @@
 
 服务启动后会自动生成：
 
-- 存档目录: [ShooterGame/Saved/Config](./ShooterGame/Saved/Config)
-- 日志目录: [ShooterGame/Saved/Logs](./ShooterGame/Saved/Logs)
+- 存档目录: ShooterGame/Saved/Config
+- 日志目录: ShooterGame/Saved/Logs
 
