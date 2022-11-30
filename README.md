@@ -15,7 +15,7 @@
 
 ## 运行环境
 
-![](https://img.shields.io/badge/OS|Linux-red.svg) ![](https://img.shields.io/badge/OS|Windows-blue.svg)
+![](https://img.shields.io/badge/Linux%20x64-red.svg) ![](https://img.shields.io/badge/Windows%20x64-blue.svg)
 
 
 ## 硬件要求
