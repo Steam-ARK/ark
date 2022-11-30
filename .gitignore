@@ -1,6 +1,8 @@
 ShooterGame/Saved/Logs/*
 *.log
 
+# ShooterGame/Saved/Config/*
+
 # --------------------
 # big files
 ShooterGame/Binaries/Win64/ShooterGameServer.pdb
