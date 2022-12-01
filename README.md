@@ -33,8 +33,9 @@
 
 1. Frok 此仓库（目的是使用 [Github SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) 下载）: `https://github.com/lyy289065406/ark.git`
 2. SSH 下载: `git clone --depth 1 --branch master git@github.com:${你的用户名}/ark.git`
-3. 解压大文件: `bin/unpack_7zip.sh` 或 `bin/unpack_7zip.ps1`（需要预装 [7-zip](https://www.7-zip.org/) 命令行）
-4. 参考 [ARK Server configuration](https://ark.fandom.com/wiki/Server_configuration) 定制自己的启动脚本、启动服务即可
+3. 切换工作目录: `cd ark`
+4. 解压大文件: `bin/unpack_7zip.sh` 或 `bin/unpack_7zip.ps1`（需要预装 [7-zip](https://www.7-zip.org/) 命令行）
+5. 参考 [ARK Server configuration](https://ark.fandom.com/wiki/Server_configuration) 定制自己的启动脚本、启动服务即可
 
 其中，启动服务所需的可执行文件：
 
