@@ -44,8 +44,8 @@
 服务启动后会自动生成：
 
 - 配置目录: `ShooterGame/Saved/Config/*`
-- 日志目录: `ShooterGame/Saved/Logs/*`
 - 存档目录: `ShooterGame/Saved/SavedArks/*`
+- 日志目录: `ShooterGame/Saved/Logs/*`
 
 
 ## 启动步骤
