@@ -46,3 +46,19 @@
 - 存档目录: ShooterGame/Saved/Config
 - 日志目录: ShooterGame/Saved/Logs
 
+
+## 启动步骤
+
+> 详见 [ark-server-docker](https://github.com/lyy289065406/ark-server-docker.git) 
+
+![](./imgs/02.jpg)
+
+![](./imgs/03.jpg)
+
+![](./imgs/04.jpg)
+
+![](./imgs/05.jpg)
+
+![](./imgs/06.jpg)
+
+![](./imgs/07.jpg)

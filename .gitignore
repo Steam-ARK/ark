@@ -1,7 +1,10 @@
 ShooterGame/Saved/Logs/*
 *.log
 
-# ShooterGame/Saved/Config/*
+# 服务器配置
+ShooterGame/Saved/Config/*
+# 存档文件
+ShooterGame/Saved/SavedArks/*
 
 # --------------------
 # big files
