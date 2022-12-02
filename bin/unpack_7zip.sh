@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # -------------------------------
 # 解压 ARK 服务端中原本的大文件（超过 100M 无法上传 Github）
 # 需要预装 7-zip: https://www.7-zip.org/
@@ -8,7 +8,7 @@
 
 BASE_DIR=`pwd`
 
-function un7zip() {
+un7zip() {
     dir=$1
     filename=$2
     zip_name="${filename}.7z"
@@ -26,7 +26,7 @@ function un7zip() {
     cd "${BASE_DIR}"
 }
 
-function un7zip_segments() {
+un7zip_segments() {
     dir=$1
     filename=$2
     zip_name="${filename}.7z"
