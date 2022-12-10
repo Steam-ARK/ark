@@ -7,7 +7,7 @@
 
 BASE_DIR=`pwd`
 
-function del() {
+del() {
     dir=$1
     filename=$2
     zip_name="${filename}.7z"
