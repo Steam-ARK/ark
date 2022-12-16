@@ -69,4 +69,4 @@
 
 ## 关于 MOD
 
-默认不安装任何 MOD，若有需要，可以参考在 [ark-mods](https://github.com/lyy289065406/ark-mods) 仓库中列出了推荐的 MOD。
+默认没有安装任何 MOD，若有需要，可以参考病安装在 [ark-mods](https://github.com/lyy289065406/ark-mods) 仓库中列出的推荐 MOD。
