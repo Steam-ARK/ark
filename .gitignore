@@ -7,6 +7,10 @@ ShooterGame/Saved/Config/*
 ShooterGame/Saved/SavedArks/*
 
 # --------------------
+# temp files
+steamapps/*
+
+# --------------------
 # big files
 ShooterGame/Binaries/Win64/ShooterGameServer.pdb
 
